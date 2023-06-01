@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/12185732d9.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        margin: 0;
+        background-color: rgb(0, 0, 0);
+      }
+      .searchBox {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        background-color: blanchedalmond;
+        background-image: url("https://wallpaperaccess.com/full/410244.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .searchBox h1 {
+        color: rgb(0, 0, 0);
+      }
+      .searchBox input {
+        width: 300px;
+        height: 30px;
+      }
+      .cardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card {
+        position: relative;
+        width: 330px;
+        height: 500px;
+        margin: 30px 40px;
+        margin-top: 50px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-position: center;
+        background-size: cover;
+        background-color: black;
+        transition: 0.1s ease-in-out;
+      }
+
+      .card:hover {
+        transform: scale(1.1);
+      }
+
+      .card::before {
+        position: absolute;
+        border-radius: 10px;
+        left: 0px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 500px;
+        content: "";
+        background: linear-gradient(to right, black, transparent);
+      }
+
+      .inputBox {
+        width: 350px;
+        border-bottom: 1px solid rgb(0, 0, 0);
+      }
+      input {
+        border: none;
+        background-color: transparent;
+      }
+      input:focus {
+        outline: none;
+      }
+
+      .fa-solid {
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+      }
+
+      .cardTitle {
+        position: relative;
+        width: 330px;
+        display: flex;
+        color: white;
+        /* border: 1px solid white; */
+      }
+
+      .cardImg {
+        width: 70px;
+        height: 110px;
+        margin: 10px;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .cardTitleH2 {
+        width: 230px;
+        height: 100px;
+
+        padding: 10px;
+      }
+
+      .cardOverViewP {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        color: rgba(255, 255, 255, 0.725);
+        overflow: scroll;
+        padding: 20px;
+      }
+
+      .cardBottom {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .fa-star {
+        color: rgba(255, 255, 0, 0.765);
+      }
+      .cardBottom p {
+        font-size: 15px;
+        margin: 0 5px;
+        color: aliceblue;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 배너 -->
+    <div class="searchBox">
+      <h1>title</h1>
+      <div class="inputBox">
+        <input
+          id="inputId"
+          type="text"
+          placeholder="Search"
+          autofocus
+          onkeyup="inputChange()"
+        />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <!-- 카드 -->
+    <div class="cardsContainer">
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
